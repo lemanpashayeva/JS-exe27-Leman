@@ -10,5 +10,18 @@ btn.addEventListener('click', function(){
         password: password.value
     }
     let ls = JSON.stringify(obj);
-    localStorage.setItem('user' , ls)
-})
+    localStorage.setItem('user' , ls);
+});
+
+const searchName = document.getElementById('searchName');
+const searchBtn = document.getElementById('searchBtn');
+
+searchBtn.addEventListener('click', function(){
+    let userName = localStorage.getItem('user');
+    let MYobj = JSON.parse(userName);
+    if(MYobj.user === searchName.value){
+        window.alert('Bu ad daha evvel daxil edilib!');
+    } else {
+        window.alert('Bu adda qeydiyyat olunmayib!');
+    };
+});
