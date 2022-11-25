@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgb(0, 8, 71);
+    color: rgba(255, 254, 222, 0.817);
+    width: 350px;
+    height: 450px;
+    padding: 30px;
+    margin: auto;
+}
+
+h2, .demo {
+    text-align: center;
+}
+
+.demo button{
+    font-size: 30px;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form label, input, h2 {
+    display: block;
+    margin: 15px;
+    font-size: 20px;
+}
