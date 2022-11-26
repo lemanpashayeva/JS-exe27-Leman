@@ -15,6 +15,7 @@ btn.addEventListener('click', function(){
 
 const searchName = document.getElementById('searchName');
 const searchBtn = document.getElementById('searchBtn');
+let wronganswer = 0;
 
 searchBtn.addEventListener('click', function(){
     let userName = localStorage.getItem('user');
@@ -23,5 +24,9 @@ searchBtn.addEventListener('click', function(){
         window.alert('Bu ad daha evvel daxil edilib!');
     } else {
         window.alert('Bu adda qeydiyyat olunmayib!');
+        wronganswer ++;
     };
+    if (wronganswer === 3) {
+        window.alert(`daxil edilen ad ${MYobj.user[0]} herfi ile baslayir`);
+    }
 });
